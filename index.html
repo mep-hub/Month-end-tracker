@@ -8,7 +8,7 @@
 :root{
   --bg:#f4f5f7;--surface:#fff;--surface2:#f8f9fb;--border:#e2e6ed;
   --lb-navy:#0d1f3c;--lb-teal:#00c0a0;--lb-teal-light:#e6faf7;--lb-teal-dim:#009e85;
-  --o2-blue:#0050ff;--blue:#0d1f3c;--blue-light:#e8edf5;
+  --blue:#0d1f3c;--blue-light:#e8edf5;
   --green:#16a34a;--green-light:#f0fdf4;--amber:#d97706;--amber-light:#fffbeb;
   --red:#dc2626;--red-light:#fef2f2;--text:#0d1f3c;--muted:#6b7280;--muted2:#9ca3af;
 }
@@ -154,10 +154,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
 
 <div class="topbar">
   <div class="topbar-left">
-    <img id="logo-lb" src="" alt="Liberty Blume" style="height:32px;display:none"/>
-    <img id="logo-o2" src="" alt="O2 Business" style="height:28px;display:none"/>
-    <div id="logo-divider" style="width:1px;height:28px;background:var(--border);margin:0 12px;display:none"></div>
-    <div><div class="app-title">Month End Close</div><div class="app-period" id="periodLabel">Loading...</div></div>
+    <div><div class="app-title">Month End Close Tracker</div><div class="app-period" id="periodLabel">Loading...</div></div>
   </div>
   <div class="topbar-right">
     <select class="period-selector" id="periodSelect" onchange="changePeriod()"></select>
@@ -168,7 +165,6 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSy
     <button class="btn btn-secondary" onclick="resetPeriod()">Reset</button>
   </div>
 </div>
-<div style="height:3px;background:linear-gradient(90deg,#0d1f3c 0%,#00c0a0 50%,#0050ff 100%)"></div>
 <div class="tab-bar">
   <button class="btn-tab active" id="tab-tracker" onclick="switchTab('tracker')">Tracker</button>
   <button class="btn-tab" id="tab-compare" onclick="switchTab('compare')">Journal Count</button>
@@ -273,10 +269,7 @@ Data CoS,Post CoS journal,WD2 PM,No,Bob"></textarea>
   </div>
 </div>
 
-<div style="text-align:center;padding:12px;font-size:11px;color:var(--muted);border-top:1px solid var(--border);background:var(--surface)">
-  <span style="color:var(--lb-navy);font-weight:600">Liberty Blume</span> &nbsp;&middot;&nbsp;
-  <span style="color:var(--o2-blue);font-weight:600">O2 Business</span> &nbsp;&middot;&nbsp; Month End Close Tracker
-</div>
+
 
 <script>
 var data = {};
